@@ -54,7 +54,7 @@ public final class CarApi {
 
     private static String mCarType = Car.CAR_TYPE_D21;
 
-    private static XPCar sCar;
+    private static ProxyCar sCar;
     private static SparseArray<ICarService> mStrategyCache = new SparseArray<>();
     private static Set<ICarService> mRegisters = new HashSet<>();
 
@@ -82,7 +82,7 @@ public final class CarApi {
 
     private static void connectCar(Context context) {
         Log.i(TAG, "execute connectCar()...");
-        sCar = new XPCar(context);
+        sCar = new ProxyCar(context);
         sCar.register(new ICarConnect() {
             @Override
             public void onConnected() {

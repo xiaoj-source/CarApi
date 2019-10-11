@@ -15,14 +15,14 @@ import com.demo.platform.carapi.callback.ICarConnect;
  *
  * @date 19-4-25
  */
-public class XPCar {
-    private static final String TAG = "XPCar";
+public class ProxyCar {
+    private static final String TAG = "ProxyCar";
     private Context mContext;
     private Car mCar;
     private boolean mConnected;
     private ICarConnect mConnectCallback;
 
-    XPCar(Context context) {
+    ProxyCar(Context context) {
         mContext = context;
     }
 
